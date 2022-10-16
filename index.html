@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Gustavo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Cifra.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>Codificardor de Cifras</title>
+</head>
+
+<body>
+    <main>
+        <form action="Formulário">
+            <div id="cif">
+                <select name="cifras" id="cifras">
+                    <option value="Cesar">Cifra de césar</option>
+                    <option value="Base64" id=" baseCod">Base64</option>
+                </select>
+
+                <select name="incremento" id="incremento">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <section id="inputes">
+                <input type="radio" name="tipoCod" id="codificar" value="cod">
+                <label for="codificar">Codificar</label>
+                <input type="radio" name="tipoCod" id="decodificar" value="decod">
+                <label for="decodificar">Decodificar</label>
+            </section>
+
+            <section id="texto">
+                <textarea name="codigo" id="codigo" cols="60" rows="15"></textarea>
+                <button type="button" id="traduzir" onclick="cripto()">Traduzir</button>
+                <p id="resultado"></p>
+            </section>
+        </form>
+    </main>
+    <script src="Js/Base64.js"></script>
+</body>
+</html>
