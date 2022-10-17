@@ -1,23 +1,48 @@
+let cod = document.getElementById("cifras")
+let btnCod = document.getElementById("traduzir")
+const $tipoCod=document.querySelector(codififar);
 
-function cripto(){
-    let cod = document.getElementById("cifras")
-    let cryptValue = cod.value
+function codBtn(){
+    btnCod.innerHTML = "Codificar Mensagem!"
+    
+    btnCod.addEventListener("click", () => {
+if($tipoCod.value==="codificar"){
+//pregunta codigo cesar ou base 64
 
-    let codificarInp = document.getElementById("codificar")
-    let codBotao = codificarInp.value
 
-    if (cryptValue === "Base64" && codBotao === "cod"){
-        let str = document.getElementById("codigo")
-        let cod1 = str.value
-        let res = document.getElementById("resultado")
-        res.innerHTML = btoa(cod1)
-    }
+
+}else{
+//pregunta codigo cesar ou base 64
+
+
 }
 
+        let cryptValue = cod.value
 
-let base64 = btoa(cod1)
-let decoded = atob(base64)
+        if (cryptValue === "Base64"){
+            let str = document.getElementById("codigo")
+            let cod1 = str.value
+            let res = document.getElementById("resultado")
+            res.innerHTML = btoa(cod1)
+        }else {
+            console.log("asdad")
+        }
+    } )
+}
 
-console.log(`Original: ${cod1}`)
-console.log(`Base64: ${base64}`)
-console.log(`Decoded: ${decoded}`)
+function decodBtn(){
+    btnCod.innerHTML = "Decodificar Mensagem!"
+
+    btnCod.addEventListener("click", () => {
+        let cryptValue = cod.value
+        
+        if (cryptValue === "Base64"){
+            let str = document.getElementById("codigo")
+            let cod1 = str.value
+            let res = document.getElementById("resultado")
+            res.innerHTML = atob(cod1)
+        }else {
+             console.log("fasdad")
+        }
+    } )
+}

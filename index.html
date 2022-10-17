@@ -16,7 +16,7 @@
             <div id="cif">
                 <select name="cifras" id="cifras">
                     <option value="Cesar">Cifra de césar</option>
-                    <option value="Base64" id=" baseCod">Base64</option>
+                    <option value="Base64">Base64</option>
                 </select>
 
                 <select name="incremento" id="incremento">
@@ -27,15 +27,15 @@
             </div>
 
             <section id="inputes">
-                <input type="radio" name="tipoCod" id="codificar" value="cod">
+                <input type="radio" name="tipoCod" id="codificar" onclick="codBtn()" value="codificar">
                 <label for="codificar">Codificar</label>
-                <input type="radio" name="tipoCod" id="decodificar" value="decod">
+                <input type="radio" name="tipoCod" id="decodificar" onclick="decodBtn()">
                 <label for="decodificar">Decodificar</label>
             </section>
 
             <section id="texto">
                 <textarea name="codigo" id="codigo" cols="60" rows="15"></textarea>
-                <button type="button" id="traduzir" onclick="cripto()">Traduzir</button>
+                <button type="button" id="traduzir">Traduzir</button>
                 <p id="resultado"></p>
             </section>
         </form>
