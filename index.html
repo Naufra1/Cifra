@@ -15,31 +15,29 @@
         <form action="Formulario">
             <div id="cif">
                 <select name="cifras" id="cifras">
+                    <option value="">Selecione a criptografia</option>
                     <option value="Cesar">Cifra de césar</option>
                     <option value="Base64">Base64</option>
                 </select>
 
-                <select name="incremento" id="incremento">
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
+                <input type="range" name="incremento" id="incremento" min="1" max="25" value="1"></input>
+                <label for="incremento" id="inclabel">1</label>
             </div>
 
             <section id="inputes">
-                <input type="radio" name="tipocod" id="codificar" onclick="codTxt()" value="c"/>
+                <input type="radio" name="tipocod" id="codificar" onclick="codTxt()" value="codificar" checked/>
                 <label for="codificar">Codificar</label>
-                <input type="radio" name="tipocod" id="decodificar" onclick="decodTxt()" value="d"/>
+                <input type="radio" name="tipocod" id="decodificar" onclick="decodTxt()" value="decodificar"/>
                 <label for="decodificar">Decodificar</label>
             </section>
 
             <section id="texto">
                 <textarea name="codigo" id="codigo" cols="60" rows="15"></textarea>
-                <button type="button" id="traduzir">Traduzir</button>
+                <button type="button" id="traduzir">Codificar Mensagem!</button>
                 <p id="resultado"></p>
             </section>
         </form>
     </main>
-    <script src="Js/Base64.js"></script>
+    <script src="Js/Criptografia.js"></script>
 </body>
 </html>

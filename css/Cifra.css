@@ -60,7 +60,15 @@ p {
     padding: 15px 0px;
     width: 551px;
     height: 318px;
-  }
+}
+
+#incremento{
+    display: none;
+}
+
+#inclabel{
+    display: none;
+}
 
 textarea:focus, input:focus, select:focus {
     outline: 0;
