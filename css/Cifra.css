@@ -1,6 +1,7 @@
 body{
     height: 100vh;
     width: 100vw;
+    background-color: #8d9db6;
 }
 
 main{
@@ -8,25 +9,43 @@ main{
     position: relative;
     justify-content: center;
     padding: 120px 0px;
+    top: 10%;
 }
 
 #cif{
     display: flex;
     margin-bottom: 50px;
+    align-items: center;
+}
+
+#cifras{
+    height: 50px;
+    background-color: #bccad6;
+    border: none;
+    border-radius: 15px;
 }
 
 select{
     font-size: 20px;
+}
+
+#incremento {
+    opacity: 0;
+    width: 300px;
+    margin-left: 30px;
     
 }
 
-#incremento{
-    margin-left: 30px;
+#inclabel{
+    opacity: 0;
+    color: black;
+    font-size: 20px;
+    margin-left: 10px;
 }
 
 #inputes{
-    display: inline-block;
-    margin-bottom: 100px;
+    display: flex;
+    margin-bottom: 50px;
     font-size: 20px;
 }
 
@@ -40,36 +59,76 @@ select{
 }
 
 #traduzir{
-    display: block;
     position: relative;
     top: 120px;
     margin: 0 100px;
     height: 50px;
     font-size: 20px;
+    background-color: #bccad6;
+    border-radius: 20px;
+    border-color: black;
 }
 
 textarea{
     resize: none;
-    border: 1px solid black;
+    border: none;
     font-size: 16px;
+    background-color: #8d9db6;
+    box-shadow: 1px 1px 1rem black;
+    border-radius: 13px;
 }
 
-p {
-    color: white;
-    background-color: gray;
-    padding: 15px 0px;
-    width: 551px;
-    height: 318px;
-}
-
-#incremento{
-    display: none;
-}
-
-#inclabel{
-    display: none;
+#resultado{
+    color: black;
 }
 
 textarea:focus, input:focus, select:focus {
     outline: 0;
+}
+
+#traduzir:hover{
+    opacity: 0.6;
+}
+
+@media (max-width:1500px){
+    main{
+        top: 0;
+    }
+    #texto{
+        flex-wrap: wrap;
+        border: 1px solid black;
+        justify-content: center;
+    }
+    textarea{
+        width: 90%;
+    }
+    #traduzir{
+        top: 0;
+        margin: 50px 0px;
+    }
+    #inputes{
+        margin: 100px auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #cif{
+        flex-wrap: wrap;
+        width: 100%;
+        border: 1px solid black;
+        justify-content: center;
+    }
+    #incremento{
+        width: 300px;
+    }
+}
+
+@media (max-width:600px){
+    textarea{
+        width: 90%;
+        margin: 0;
+
+    }
+    #incremento, #inclabel{
+        margin-top: 10px;
+    }
 }

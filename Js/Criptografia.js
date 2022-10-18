@@ -7,11 +7,11 @@ let str = document.getElementById("codigo")
 
 //Função para traduzir.
 btnCod.addEventListener("click", () => {
-    let txt = document.getElementById("codigo").value
+    let txt = str.value
     let cod1 = str.value
     const res = document.getElementById("resultado")
     let codInp = document.querySelector('input[name = "tipocod"]:checked').value
-    let somadorCesar = document.getElementById("incremento").value
+    let somadorCesar = inc.value
     let crct
     let novoCrct
     let txtCodificado = ""
@@ -87,14 +87,16 @@ btnCod.addEventListener("click", () => {
 
 cod.addEventListener("click", () =>{ //função para fazer o slider aparecer.
     if (cod.value === "Cesar"){
-        inc.style.display = "inline-block"
-        incLabel.style.display = "inline-block"
+        inc.style.opacity = "1"
+        incLabel.style.opacity = "1"
+        inc.style.transition = "0.7s"
+        incLabel.style.transition = "0.7s"
         inc.addEventListener("change", () => {
             incLabel.textContent = inc.value
         })
     } else{
-        inc.style.display = "none"
-        incLabel.style.display = "none"
+        inc.style.opacity = "0"
+        incLabel.style.opacity = "0"
     }
 })
 
