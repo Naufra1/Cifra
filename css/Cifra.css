@@ -96,7 +96,6 @@ textarea:focus, input:focus, select:focus {
     }
     #texto{
         flex-wrap: wrap;
-        border: 1px solid black;
         justify-content: center;
     }
     textarea{
@@ -114,7 +113,6 @@ textarea:focus, input:focus, select:focus {
     #cif{
         flex-wrap: wrap;
         width: 100%;
-        border: 1px solid black;
         justify-content: center;
     }
     #incremento{
