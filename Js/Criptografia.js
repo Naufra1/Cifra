@@ -95,8 +95,8 @@ cod.addEventListener("click", () =>{ //função para fazer o slider aparecer.
             incLabel.textContent = inc.value
         })
     } else{
-        inc.style.opacity = "0"
-        incLabel.style.opacity = "0"
+        inc.style.opacity = "1"
+        incLabel.style.opacity = "1"
     }
 })
 
